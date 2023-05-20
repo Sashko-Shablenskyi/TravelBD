@@ -1,0 +1,86 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.logo {
+  font-family: 'Righteous';
+  font-weight: 400;
+  font-size: rem(32);
+  line-height: calc(100 / 32);
+  text-transform: capitalize;
+  color: var(--text-invert);
+  span {
+    color: var(--accent);
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue('gap', 116, -60);
+    @include adaptiveValue('font-size', 25, 18);
+
+    line-height: calc(100 / 25);
+    text-transform: uppercase;
+    color: var(--text-invert);
+
+    @media (max-width: $mobile) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      width: 100%;
+      transition: all 0.3s;
+    }
+
+    .menu-open & {
+      right: 0;
+      background-color: #fff;
+      color: var(--bg-accent);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: rem(34);
+      line-height: calc(100 / 48);
+    }
+  }
+}
+
+.login {
+  color: var(--accent);
+
+  @media (max-width: $mobile) {
+    margin-left: auto;
+    @include adaptiveValue('margin-right', 20, 0);
+  }
+}
+
+.btn {
+  background: var(--accent);
+  border-radius: rem(10);
+  padding: rem(5) rem(53);
+  @include adaptiveValue('font-size', 30, 18);
+  line-height: calc(100 / 30);
+  text-transform: capitalize;
+  color: var(--bg-accent);
+
+  @media (max-width: $mobile) {
+    line-height: calc(100 / 50);
+    padding: rem(5) rem(28);
+  }
+}
+
+.title {
+  font-family: 'Josefin Sans';
+  font-weight: 600;
+  @include adaptiveValue('font-size', 88, 36);
+  line-height: calc(100 / 88);
+  color: var(--text-primary);
+}
+
+.subtitle {
+  @include adaptiveValue('font-size', 32, 18);
+  line-height: calc(100 / 32);
+  text-transform: capitalize;
+  color: var(--text-primary);
+}

@@ -1,0 +1,52 @@
+.about {
+  @include adaptiveValue('padding-top', 210, 100);
+  @include adaptiveValue('padding-bottom', 205, 100);
+
+  &__inner {
+    display: flex;
+    @include adaptiveValue('gap', 53, 25);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    flex: 1;
+  }
+
+  &__descr {
+    font-weight: 300;
+    @include adaptiveValue('font-size', 32, 16);
+    line-height: calc(53 / 32);
+    text-transform: capitalize;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+    @include adaptiveValue('font-size', 32, 16);
+    line-height: calc(100 / 32);
+    text-transform: uppercase;
+    color: #060a3f;
+    span {
+      color: var(--accent);
+    }
+  }
+
+  &__img {
+    border-radius: rem(90) 0 rem(90) 0;
+    overflow: hidden;
+    flex: 1;
+    max-width: rem(563);
+    min-height: rem(100);
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
