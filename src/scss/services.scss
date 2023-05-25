@@ -1,0 +1,50 @@
+.services {
+  @include adaptiveValue('padding-bottom', 200, 100);
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    @include adaptiveValue('column-gap', 30, 25);
+    @include adaptiveValue('row-gap', 65, 45);
+    @include adaptiveValue('margin-top', 90, 45);
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: rem(290);
+
+    &__img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent);
+      border-radius: 50%;
+      width: rem(210);
+      aspect-ratio: 1;
+      box-shadow: 0 0 0 rem(20) var(--accent-025);
+    }
+
+    &__title {
+      font-family: 'Josefin Sans';
+      font-weight: 600;
+      font-size: rem(35);
+      line-height: calc(26 / 35);
+      text-transform: uppercase;
+      color: var(--bg-accent);
+      margin: rem(65) 0 rem(18);
+    }
+
+    &__descr {
+      font-weight: 300;
+      font-size: rem(24);
+      line-height: calc(26 / 24);
+      text-transform: lowercase;
+      color: var(--text-secondary);
+    }
+  }
+}

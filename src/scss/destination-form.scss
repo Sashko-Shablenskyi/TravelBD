@@ -1,0 +1,42 @@
+.destination-form {
+  background-color: var(--bg-accent);
+  padding: rem(46) 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: rem(35);
+  }
+
+  &__title {
+    font-size: rem(25);
+    line-height: calc(26 / 26);
+    color: var(--text-invert);
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  form {
+    display: flex;
+    gap: rem(35);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    input,
+    select {
+      background-color: transparent;
+      border: rem(1) solid var(--invert-half);
+      border-radius: rem(8);
+      padding: rem(15) rem(25);
+      color: var(--text-invert);
+
+      &::placeholder {
+        font-weight: 300;
+        font-size: rem(16);
+        line-height: calc(26 / 16);
+        text-transform: uppercase;
+        color: var(--text-invert);
+      }
+    }
+  }
+}
