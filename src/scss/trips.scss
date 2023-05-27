@@ -1,0 +1,28 @@
+.trips {
+  @include adaptiveValue('padding-top', 181, 50);
+  @include adaptiveValue('padding-bottom', 191, 50);
+  &__wrapper {
+    display: flex;
+    gap: rem(35);
+    font-weight: 300;
+    @include adaptiveValue('margin-top', 53, 25);
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__date {
+    font-size: rem(20);
+    line-height: calc(44 / 20);
+    text-transform: lowercase;
+    color: rgba(4, 14, 39, 0.6);
+  }
+
+  &__descr {
+    font-size: rem(24);
+    line-height: calc(44 / 24);
+    text-transform: capitalize;
+    color: var(--bg-accent);
+  }
+}

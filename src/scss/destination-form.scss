@@ -23,6 +23,12 @@
     align-items: center;
     width: 100%;
     input,
+    select,
+    textarea,
+    button {
+      flex: 1 1 auto;
+    }
+    input,
     select {
       background-color: transparent;
       border: rem(1) solid var(--invert-half);
